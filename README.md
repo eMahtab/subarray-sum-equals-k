@@ -54,7 +54,7 @@ public class Solution {
 }
 ```
 
-#### Complexity Analysis
+#### Complexity Analysis :
 
 ###### Time complexity : O(n^2)
 We need to consider every subarray possible.
@@ -101,6 +101,14 @@ class Solution {
     }
 }
 ```
+
+##### Complexity Analysis :
+
+###### Time complexity : O(n)
+The entire nums array is traversed only once.
+
+###### Space complexity : O(n)
+Hashmap map can contain up to n distinct entries in the worst case.
 
 # References :
 https://leetcode.com/articles/subarray-sum-equals-k
