@@ -53,6 +53,15 @@ public class Solution {
     }
 }
 ```
+
+#### Complexity Analysis
+
+###### Time complexity : O(n^2)
+We need to consider every subarray possible.
+
+###### Space complexity : O(1)
+Constant space is used.
+
 # Implementation 3 : Even Better
 ### Approach :
 Say you are given an array e.g. [a0, a1, a2, a3, a4, a5, a6... an] . 
