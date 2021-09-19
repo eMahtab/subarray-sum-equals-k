@@ -12,31 +12,8 @@ Output: 2
 2. The range of numbers in the array is [-1000, 1000] and the range of the integer k is [-1e7, 1e7].
 
 
-# Implementation : Naive
-```java
-class Solution {
 
-	public int subarraySum(int[] nums, int k) {
-		int count = 0;
-		if (nums == null || nums.length == 0)
-			return 0;
-
-		for (int i = 1; i <= nums.length; i++) {
-			for (int index = 0; index < nums.length - i + 1; index++) {
-				int sum = 0;
-				for (int j = index; j < index + i; j++)
-					sum += nums[j];
-				if (sum == k)
-					count++;
-			}
-		}
-
-		return count;
-	}
-	
-}
-```
-# Implementation 2 : Let's do little better
+# Implementation 1 : Check all possible continuous subarrays
 ```java
 public class Solution {
     public int subarraySum(int[] nums, int k) {
@@ -62,7 +39,7 @@ We need to consider every subarray possible.
 ###### Space complexity : O(1)
 Constant space is used.
 
-# Implementation 3 : Even Better
+# Implementation 2 : Even Better
 ### Approach :
 Say you are given an array e.g. [a0, a1, a2, a3, a4, a5, a6... an] . 
 ```
