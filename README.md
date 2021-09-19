@@ -70,13 +70,26 @@ class Solution {
         int sum = 0;
         for(int i = 0; i < nums.length; i++) {
             sum += nums[i];
-            if(map.containsKey(sum - k))
-                count += map.get(sum-k);
+	    // the reason we are checking in the map whether it contains sum - k, because it means there is a subarray with sum k  
+            if(map.containsKey(sum - k)) 
+                count += map.get(sum-k); // watch out : count++; will not give correct result
             map.put(sum, map.getOrDefault(sum,0) + 1);
         }
         return count;
     }
 }
+```
+
+```
+int[] nums = [3, 4, 1, 6, -4, -3, 5, 2], k = 7
+The answer will be 6
+[3, 4]
+[1, 6]
+[4, 1, 6, -4]
+[3, 4, 1, 6, -4, -3]
+[1, 6, -4, -3, 5, 2]
+[5, 2]
+
 ```
 
 ##### Complexity Analysis :
