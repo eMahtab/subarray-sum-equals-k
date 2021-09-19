@@ -81,8 +81,10 @@ class Solution {
 ```
 
 ```
+e.g.
 int[] nums = [3, 4, 1, 6, -4, -3, 5, 2], k = 7
 The answer will be 6
+
 [3, 4]
 [1, 6]
 [4, 1, 6, -4]
